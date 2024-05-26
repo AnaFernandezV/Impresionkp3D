@@ -1,0 +1,59 @@
+
+.index
+    width: 100%
+    height: 100vh
+    z-index: 3000
+
+
+    h1
+    text-align: center
+    margin: 5% 0 0 0 
+    font-size: 30px
+    
+    h2
+      font-size: 30px
+      text-align: center
+    
+    hr
+      border: none
+      height: 0
+    
+
+    .custom-button 
+      background: #1AAB8A
+      color: #fff
+      border: none
+      position: relative
+      height: 60px
+      font-size: 1.6em
+      padding: 0 2em
+      cursor: pointer
+      transition: 800ms ease all
+      outline: none
+    
+    .custom-button::hover 
+      background: #fff
+      color: #1AAB8A
+    
+    .custom-button:before,
+    .custom-button:after 
+      content: ''
+      position: absolute
+      top: 0
+      right: 0
+      height: 2px
+      width: 0
+      background: #1AAB8A
+      transition: 400ms ease all
+    
+    .custom-button:after 
+      right: inherit
+      top: inherit
+      left: 0
+      bottom: 0
+    
+    .custom-button:hover:before,
+    .custom-button:hover:after 
+      width: 100%
+      transition: 800ms ease all
+    
