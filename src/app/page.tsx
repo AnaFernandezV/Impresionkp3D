@@ -6,6 +6,7 @@ import bigCube from '../assets/Images/big-cube.png';
 import { Menu } from '../components/Header/Menu/Menu';
 import { Content } from '../components/Content/Content';
 
+
 export default function Home() {
   return (
     <div >
@@ -19,7 +20,7 @@ export default function Home() {
           backgroundSize:'cover',
           top:0,
           zIndex:'-1',
-          marginTop:'-70px',
+          marginTop:'-75px',
         }}> 
       
         </ParallaxLayer>
@@ -28,6 +29,7 @@ export default function Home() {
           offset={0.1}
           speed={1}> 
           <ParallaxLayer speed={2}> <Content /></ParallaxLayer>
+          
        
           <img src={bigCube.src} style={{ display: 'block', width: '100%', marginLeft: '0%' ,marginTop:'0%',zIndex:'-1',position:'relative',}} />
 
