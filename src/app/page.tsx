@@ -3,8 +3,10 @@ import React from 'react';
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 import backgroundCube from '../assets/Images/cube-background.png';
 import bigCube from '../assets/Images/big-cube.png';
+import someCubes from '../assets/Images/some-cubes.png';
 import { Menu } from '../components/Header/Menu/Menu';
 import { Content } from '../components/Content/Content';
+import { Service } from '../components/Services/Service';
 
 
 export default function Home() {
@@ -30,14 +32,21 @@ export default function Home() {
           speed={1}> 
           <ParallaxLayer speed={2}> <Content /></ParallaxLayer>
           
-       
+      
           <img src={bigCube.src} style={{ display: 'block', width: '100%', marginLeft: '0%' ,marginTop:'0%',zIndex:'-1',position:'relative',}} />
 
       </ParallaxLayer>
-
+      <ParallaxLayer offset={0.99} speed={0.9}
+        style={{
+          backgroundImage:`url(${someCubes.src})`,
+          backgroundSize:'cover',
+          zIndex:'-1',
+          position:'relative'}} >
+        </ParallaxLayer>
       
           <ParallaxLayer style={{marginTop:'10%'}} offset={0.9999} speed={1.2}>
-        {/*   <img src={cubo3} style={{ display: 'block', width: '100%', marginLeft: '0%' ,marginTop:'-50%',zIndex:'-1',position:'relative',}} /> */}
+            <Service/>
+
           </ParallaxLayer>
           <ParallaxLayer></ParallaxLayer>
         
