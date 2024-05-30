@@ -1,5 +1,6 @@
 "use client";
 import React from 'react';
+import '../components/Header/header.sass';
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 import backgroundCube from '../assets/Images/cube-background.png';
 import bigCube from '../assets/Images/big-cube.png';
@@ -7,13 +8,20 @@ import someCubes from '../assets/Images/some-cubes.png';
 import { Menu } from '../components/Header/Menu/Menu';
 import { Content } from '../components/Content/Content';
 import { Service } from '../components/Services/Service';
+import { Logo } from '../components/Header/Logo/Logo';
 
 
 export default function Home() {
   return (
-    <div >
+    <div>
       <Parallax pages ={3}> 
-      <Menu/>   
+      <ParallaxLayer offset={0}>
+        <div className='header'>
+          <Logo/>   
+          <Menu/>
+        </div>
+      </ParallaxLayer>
+     
         <ParallaxLayer 
         offset={0.1}
         speed={1}
@@ -30,7 +38,10 @@ export default function Home() {
         <ParallaxLayer 
           offset={0.1}
           speed={1}> 
-          <ParallaxLayer speed={2}> <Content /></ParallaxLayer>
+
+          <ParallaxLayer speed={2}> 
+            <Content />
+          </ParallaxLayer>
           
       
           <img src={bigCube.src} style={{ display: 'block', width: '100%', marginLeft: '0%' ,marginTop:'0%',zIndex:'-1',position:'relative',}} />
