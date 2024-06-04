@@ -14,8 +14,6 @@ const Content: React.FC = () =>{
             <ButtonCotizar/>
         </div>
         
-
-
-);
+    );
 }
 export { Content };

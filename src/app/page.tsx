@@ -1,5 +1,6 @@
 "use client";
 import React from 'react';
+import Image from "next/image";
 import '../components/Header/header.sass';
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 import backgroundCube from '../assets/Images/cube-background.png';
@@ -9,6 +10,8 @@ import { Menu } from '../components/Header/Menu/Menu';
 import { Content } from '../components/Content/Content';
 import { Service } from '../components/Services/Service';
 import { Logo } from '../components/Header/Logo/Logo';
+import { Gallery } from '@/components/Gallery/Gallery';
+import { Footer } from '@/components/Footer/Footer';
 
 
 export default function Home() {
@@ -21,7 +24,7 @@ export default function Home() {
           <Menu/>
         </div>
       </ParallaxLayer>
-     
+    
         <ParallaxLayer 
         offset={0.1}
         speed={1}
@@ -59,11 +62,14 @@ export default function Home() {
             <Service/>
 
           </ParallaxLayer>
-          <ParallaxLayer></ParallaxLayer>
-        
-        
 
-      </Parallax>
+          <ParallaxLayer offset={1.6}>
+            <Gallery />
+      
+          </ParallaxLayer>
+        
+        </Parallax>
+        <Footer/>
     </div>
   );
 }
