@@ -1,0 +1,60 @@
+.contactBtn
+  background-color: #26b585
+  border: solid transparent
+  border-radius: 10px
+  border-width: 0 0 4px
+  box-sizing: border-box
+  color: #1b1a1a
+  cursor: pointer
+  display: inline-block
+  font-size: 15px
+  font-weight: 700
+  letter-spacing: .8px
+  line-height: 20px
+  margin: 20px 0 0 0
+  outline: none
+  overflow: visible
+  padding: 13px 16px
+  text-align: center
+  text-transform: uppercase
+  touch-action: manipulation
+  transform: translateZ(0)
+  transition: filter .2s
+  user-select: none
+  -webkit-user-select: none
+  vertical-align: middle
+  white-space: nowrap
+  width: 70%
+
+  &:after 
+    background-clip: padding-box
+    background-color: #52ffc5
+    border: solid transparent
+    border-radius: 10px
+    border-width: 0 0 4px
+    bottom: -4px
+    content: ""
+    left: 0
+    position: absolute
+    right: 0
+    top: 0
+    z-index: -1
+  
+
+  &:main,
+  &:focus 
+    user-select: auto
+
+
+  &:hover:not(:disabled) 
+    filter: brightness(0.8)
+    -webkit-filter: brightness(0.8)
+
+
+  &:disabled 
+    cursor: auto
+
+
+  &:active 
+    border-width: 4px 0 0
+    background: none
