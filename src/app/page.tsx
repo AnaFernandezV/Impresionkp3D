@@ -1,30 +1,28 @@
 "use client";
 import React from 'react';
-import Image from "next/image";
-import '../components/Header/header.sass';
+import '@/components/Header/header.sass';
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
-import backgroundCube from '../assets/Images/cube-background.png';
-import bigCube from '../assets/Images/big-cube.png';
-import someCubes from '../assets/Images/some-cubes.png';
-import { Menu } from '../components/Header/Menu/Menu';
-import { Content } from '../components/Content/Content';
-import { Service } from '../components/Services/Service';
-import { Logo } from '../components/Header/Logo/Logo';
+import backgroundCube from '@/assets/Images/cube-background.png';
+import bigCube from '@/assets/Images/big-cube.png';
+import someCubes from '@/assets/Images/some-cubes.png';
+import { Menu } from '@/components/Header/Menu/Menu';
+import { Content } from '@/components/Content/Content';
+import { Service } from '@/components/Services/Service';
+import { Logo } from '@/components/Header/Logo/Logo';
 import { Gallery } from '@/components/Gallery/Gallery';
 import { Footer } from '@/components/Footer/Footer';
 
 
 export default function Home() {
   return (
-    <div>
+      <>
       <Parallax pages ={3}> 
       <ParallaxLayer offset={0}>
         <div className='header'>
           <Logo/>   
           <Menu/>
         </div>
-      </ParallaxLayer>
-    
+      </ParallaxLayer>    
         <ParallaxLayer 
         offset={0.1}
         speed={1}
@@ -67,9 +65,13 @@ export default function Home() {
             <Gallery />
       
           </ParallaxLayer>
+
+          <ParallaxLayer offset={2}>
+            <Footer/>
+          </ParallaxLayer>
         
         </Parallax>
-        <Footer/>
-    </div>
+        
+    </>
   );
 }
