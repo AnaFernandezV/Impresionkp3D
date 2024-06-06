@@ -1,7 +1,7 @@
 "use client";
-import React from 'react';
+import React , { useRef } from 'react';
 import '@/components/Header/header.sass';
-import { Parallax, ParallaxLayer } from '@react-spring/parallax';
+import { Parallax, ParallaxLayer, IParallax } from '@react-spring/parallax';
 import backgroundCube from '@/assets/Images/cube-background.png';
 import bigCube from '@/assets/Images/big-cube.png';
 import someCubes from '@/assets/Images/some-cubes.png';
@@ -14,10 +14,12 @@ import { Footer } from '@/components/Footer/Footer';
 
 
 export default function Home() {
+  const parallax = useRef<IParallax>(null!)
+
   return (
       <>
-      <Parallax pages ={3}> 
-      <ParallaxLayer offset={0}>
+      <Parallax ref={parallax} pages ={3}> 
+      <ParallaxLayer offset={0} >
         <div className='header'>
           <Logo/>   
           <Menu/>
@@ -40,7 +42,7 @@ export default function Home() {
           offset={0.1}
           speed={1}> 
 
-          <ParallaxLayer speed={2}> 
+          <ParallaxLayer speed={2} onClick={() => parallax.current.scrollTo(1)}> 
             <Content />
           </ParallaxLayer>
           
@@ -56,17 +58,17 @@ export default function Home() {
           position:'relative'}} >
         </ParallaxLayer>
       
-          <ParallaxLayer style={{marginTop:'10%'}} offset={0.9999} speed={1.2}>
+          <ParallaxLayer style={{marginTop:'0%'}} offset={1} speed={1.2} onClick={() => parallax.current.scrollTo(1.6)}>
             <Service/>
 
           </ParallaxLayer>
 
-          <ParallaxLayer offset={1.6}>
+          <ParallaxLayer offset={1.6} onClick={() => parallax.current.scrollTo(0)} >
             <Gallery />
       
           </ParallaxLayer>
 
-          <ParallaxLayer offset={2}>
+          <ParallaxLayer offset={2} >
             <Footer/>
           </ParallaxLayer>
         

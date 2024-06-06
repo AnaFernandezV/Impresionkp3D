@@ -1,20 +1,18 @@
 import React from 'react';
-import '../Menu/menu.sass'
+import '../Menu/Menu.sass';
 
-const Menu: React.FC = () =>{
+const Menu:React.FC = () =>{
 
     return(
         <div className='menuContent'>
+            
             <ul>
-                <li>Servicios</li>
-                <li>Galería </li>
-                <li>Contacto </li>
-
+                <a href=""><li>Servicios</li></a>
+                <a href=""><li>Galería</li></a>
+                <a href=""><li>Contacto</li></a>
+                
             </ul>
-
         </div>
-
-
 );
 }
 export { Menu };
