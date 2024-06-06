@@ -10,7 +10,7 @@ const TransitionButton = style({
 const ButtonCotizar: React.FC = () => {
     return (
         <div className="container">
-            <a className="btn">Cotizar</a>
+            <button className="btnCotizar">Cotizar</button>
         </div>
 
     );
