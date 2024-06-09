@@ -1,11 +1,6 @@
 import React from "react";
 import './Button.sass';
 
-/* 
-const TransitionButton = style({
-
-
-}) */
 
 const ButtonCotizar: React.FC = () => {
     return (

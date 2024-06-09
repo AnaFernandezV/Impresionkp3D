@@ -1,6 +1,6 @@
 import React from "react";
 import './Content.sass';
-import '../ButtonCotizar/Button';
+import '../ButtonCotizar/Button.sass';
 import { ButtonCotizar } from "../ButtonCotizar/Button";
 
 

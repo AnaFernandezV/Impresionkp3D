@@ -2,7 +2,7 @@
 import React , { useRef } from 'react';
 import '@/components/Header/header.sass';
 import { Parallax, ParallaxLayer, IParallax } from '@react-spring/parallax';
-import backgroundCube from '@/assets/Images/cube-background.png';
+import backgoundLineal from '@/assets/Images/background-lineal.png';
 import bigCube from '@/assets/Images/big-cube.png';
 import someCubes from '@/assets/Images/some-cubes.png';
 import { Menu } from '@/components/Header/Menu/Menu';
@@ -27,14 +27,7 @@ export default function Home() {
       </ParallaxLayer>    
         <ParallaxLayer 
         offset={0.1}
-        speed={1}
-        style={{
-          backgroundImage:`url(${backgroundCube.src})`,
-          backgroundSize:'cover',
-          top:0,
-          zIndex:'-1',
-          marginTop:'-75px',
-        }}> 
+        speed={1}> 
       
         </ParallaxLayer>
 
@@ -42,23 +35,19 @@ export default function Home() {
           offset={0.1}
           speed={1}> 
 
-          <ParallaxLayer speed={2} onClick={() => parallax.current.scrollTo(1)}> 
+          <ParallaxLayer speed={2} onClick={() => parallax.current.scrollTo(1)} > 
             <Content />
           </ParallaxLayer>
           
       
-          <img src={bigCube.src} style={{ display: 'block', width: '100%', marginLeft: '0%' ,marginTop:'0%',zIndex:'-1',position:'relative',}} />
-
+          {/* <img src={bigCube.src} style={{ display: 'block', width: '100%', marginLeft: '0%' ,marginTop:'0%',zIndex:'-1',position:'relative',}} />
+ */}
       </ParallaxLayer>
       <ParallaxLayer offset={0.99} speed={0.9}
-        style={{
-          backgroundImage:`url(${someCubes.src})`,
-          backgroundSize:'cover',
-          zIndex:'-1',
-          position:'relative'}} >
+        >
         </ParallaxLayer>
       
-          <ParallaxLayer style={{marginTop:'0%'}} offset={1} speed={1.2} onClick={() => parallax.current.scrollTo(1.6)}>
+          <ParallaxLayer style={{marginTop:'0%',backgroundColor:"#FFF",}} offset={1} speed={1.2} onClick={() => parallax.current.scrollTo(1.6)}>
             <Service/>
 
           </ParallaxLayer>

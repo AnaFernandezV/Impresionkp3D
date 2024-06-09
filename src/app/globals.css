@@ -3,5 +3,20 @@ body{
     padding:0;
     background-color: #111111;
     color: rgb(255, 255, 255);
+
+
     
+}
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(./background-lineal.png);
+    background-size: cover;
+
+    opacity: 0.1; /* Ajusta el valor de opacidad según lo necesites */
+    z-index: -1; /* Para asegurarse de que el pseudo-elemento quede detrás del contenido */
 }
