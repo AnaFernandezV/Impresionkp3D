@@ -4,7 +4,7 @@ import '@/components/Header/header.sass';
 import { Parallax, ParallaxLayer, IParallax } from '@react-spring/parallax';
 import { Menu } from '@/components/Header/Menu/Menu';
 import { Content } from '@/components/Content/Content';
-import { Service } from '@/components/Services/Service';
+import { Service } from '@/components/Service/Service';
 import { Logo } from '@/components/Header/Logo/Logo';
 import { Gallery } from '@/components/Gallery/Gallery';
 import { Footer } from '@/components/Footer/Footer';
@@ -15,7 +15,7 @@ export default function Home() {
 
   return (
       <>
-      <Parallax ref={parallax} pages ={3}> 
+      <Parallax ref={parallax} pages ={4}> 
 
       <ParallaxLayer offset={0} >
         <div className='header'>
@@ -34,17 +34,17 @@ export default function Home() {
         
       </ParallaxLayer>
         
-          <ParallaxLayer style={{marginTop:'0%',backgroundColor:"#FFF",}} offset={1} speed={1.2} onClick={() => parallax.current.scrollTo(1.6)}>
+          <ParallaxLayer style={{marginTop:'0%'}} offset={1} speed={1.2} onClick={() => parallax.current.scrollTo(2)}>
             <Service/>
 
           </ParallaxLayer>
 
-          <ParallaxLayer offset={1.6} onClick={() => parallax.current.scrollTo(0)} >
+          <ParallaxLayer offset={2} onClick={() => parallax.current.scrollTo(3)} >
             <Gallery />
       
           </ParallaxLayer>
 
-          <ParallaxLayer offset={2} >
+          <ParallaxLayer offset={3} onClick={() => parallax.current.scrollTo(0)}>
             <Footer/>
           </ParallaxLayer>
         

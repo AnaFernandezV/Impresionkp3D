@@ -5,7 +5,6 @@ import { ButtonCotizar } from "../ButtonCotizar/Button";
 import { motion } from "framer-motion";
 
 
-
 const Content: React.FC = () =>{
   const container = {
     hidden: { opacity: 0 },
