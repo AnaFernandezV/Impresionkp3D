@@ -22,33 +22,28 @@ export default function Home() {
           <Logo/>   
           <Menu/>
         </div>
-      </ParallaxLayer>  
+      </ParallaxLayer>       
 
-          <ParallaxLayer 
-          offset={0.1}
-          speed={1}> 
-
-          <ParallaxLayer speed={2} onClick={() => parallax.current.scrollTo(1)} > 
+          <ParallaxLayer offset={0.1} speed={2} onClick={() => parallax.current.scrollTo(1)} > 
             <Content />
+        
           </ParallaxLayer>
         
-      </ParallaxLayer>
-        
-          <ParallaxLayer style={{marginTop:'0%'}} offset={1} speed={1.2} onClick={() => parallax.current.scrollTo(2)}>
+          <ParallaxLayer offset={1} speed={1.2} onClick={() => parallax.current.scrollTo(2)}>
             <Service/>
 
           </ParallaxLayer>
 
-          <ParallaxLayer offset={2} onClick={() => parallax.current.scrollTo(3)} >
+          <ParallaxLayer offset={2} speed={1.3}>
             <Gallery />
-      
+            
           </ParallaxLayer>
 
-          <ParallaxLayer offset={3} onClick={() => parallax.current.scrollTo(0)}>
+          <ParallaxLayer offset={3} >
             <Footer/>
           </ParallaxLayer>
-        
-        </Parallax>
+      
+      </Parallax>
         
     </>
   );
