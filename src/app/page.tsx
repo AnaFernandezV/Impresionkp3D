@@ -1,7 +1,8 @@
 "use client";
 import React , { useRef } from 'react';
-import '@/components/Header/header.sass';
 import { Parallax, ParallaxLayer, IParallax } from '@react-spring/parallax';
+import '@/components/Header/header.sass';
+
 import { Menu } from '@/components/Header/Menu/Menu';
 import { Content } from '@/components/Content/Content';
 import { Service } from '@/components/Service/Service';
@@ -13,28 +14,34 @@ import { Footer } from '@/components/Footer/Footer';
 export default function Home() {
   const parallax = useRef<IParallax>(null!)
 
+  const handleScrollTo = (page:number) =>{
+    parallax.current.scrollTo(page);
+
+  };
   return (
       <>
+      
       <Parallax ref={parallax} pages ={4}> 
 
       <ParallaxLayer offset={0} >
         <div className='header'>
           <Logo/>   
-          <Menu/>
-        </div>
+            <Menu onScrollTo={handleScrollTo} />
+          </div>
       </ParallaxLayer>       
 
-          <ParallaxLayer offset={0.1} speed={2} onClick={() => parallax.current.scrollTo(1)} > 
+          <ParallaxLayer offset={0.1} speed={2} > 
             <Content />
         
           </ParallaxLayer>
         
-          <ParallaxLayer offset={1} speed={1.2} onClick={() => parallax.current.scrollTo(2)}>
-            <Service/>
+          <ParallaxLayer  offset={1} speed={1.2} onClick={() => parallax.current.scrollTo(2)}>
+            
+              < Service/>           
 
           </ParallaxLayer>
 
-          <ParallaxLayer offset={2} speed={1.3}>
+          <ParallaxLayer offset={2} speed={1}>
             <Gallery />
             
           </ParallaxLayer>
@@ -44,6 +51,7 @@ export default function Home() {
           </ParallaxLayer>
       
       </Parallax>
+      
         
     </>
   );

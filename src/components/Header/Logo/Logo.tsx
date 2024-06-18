@@ -8,7 +8,6 @@ const Logo: React.FC = () =>{
 			<img src={LogoImg.src} alt="Logo impresion kp3d" />
 
         </div>
-
     );
 
 }

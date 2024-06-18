@@ -1,16 +1,22 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import '../Menu/Menu.sass';
 
-const Menu:React.FC = () =>{
 
+interface MenuProps{
+    onScrollTo: (page: number) => void;
+}
+
+const Menu:React.FC<MenuProps> = ({onScrollTo}) =>{
+    
     return(
         <div className='menuContent'>
             
             <ul>
-                <a href=""><li>Servicios</li></a>
-                <a href=""><li>Nuestros Trabajos</li></a>
-                <a href=""><li>Galería</li></a>
-                <a href="https://wa.me/56972589359" target="_blank"><li>Contacto</li></a>
+                <li><a href='#'>Inicio</a></li>
+                <li><a onClick={() => onScrollTo(1)} >Servicios</a></li>
+                <li> <a onClick={() => onScrollTo(2)}>Nuestros Trabajos</a></li>
+                <li><a>Galería</a></li>
+                <li><a href="https://wa.me/56972589359" target="_blank">Contacto</a></li>
                 
             </ul>
         </div>

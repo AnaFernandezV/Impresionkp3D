@@ -18,7 +18,7 @@ const Service: React.FC = () => {
   }, [controls, inView]);
 
     return(
-        <div className="service-content">
+        <div className="service-content" id='service'>
           
             <motion.h1
             ref={ref}
