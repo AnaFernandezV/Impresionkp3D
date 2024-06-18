@@ -10,8 +10,9 @@ const Footer: React.FC = () => {
 	
     return(
         <div className="backFooter" >
-          <div className="logo">
+          <div className="logo" id="logo">
 						<h3>Impresión KP3D</h3>
+
 					<Logo/> 
 					</div>
 					<div className="socialMediaW">

@@ -10,7 +10,7 @@ import { MoreButton } from '../Gallery/seeMoreButton/MoreButton';
 export function Gallery(){
 
   return (    
-
+    
     <div className="content-gallery" > 
       <h1 id='nuestros-trabajos'>Nuestros Trabajos</h1>
       <LightGallery
