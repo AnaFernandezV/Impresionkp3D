@@ -5,7 +5,7 @@ import './Button.sass';
 const ButtonCotizar: React.FC = () => {
     return (
         <div className="container">
-            <button className="btnCotizar">Cotizar</button>
+            <a href="https://wa.me/56972589359 " className="btnCotizar" target="_blank">Cotizar</a>
         </div>
 
     );
