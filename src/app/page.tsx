@@ -24,7 +24,7 @@ export default function Home() {
       <Router>
       <Routes>
         <Route path="/" element={
-          <Parallax ref={parallax} pages={4}>
+          <Parallax ref={parallax} pages={4.5}>
             <ParallaxLayer offset={0}>
               <div className='header' id='logo'>
                 <Logo />
@@ -40,7 +40,7 @@ export default function Home() {
             <ParallaxLayer offset={2} speed={1}>
               <Gallery />
             </ParallaxLayer>
-            <ParallaxLayer offset={3}>
+            <ParallaxLayer offset={3.5}>
               <Footer />
             </ParallaxLayer>
           </Parallax>
