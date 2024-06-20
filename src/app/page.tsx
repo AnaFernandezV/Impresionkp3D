@@ -31,7 +31,7 @@ export default function Home() {
                 <Menu onScrollTo={handleScrollTo} />
               </div>
             </ParallaxLayer>
-            <ParallaxLayer offset={0.1} speed={2}>
+            <ParallaxLayer offset={0.2} speed={2}>
               <Content />
             </ParallaxLayer>
             <ParallaxLayer offset={1} speed={1.2} onClick={() => parallax.current.scrollTo(2)}>

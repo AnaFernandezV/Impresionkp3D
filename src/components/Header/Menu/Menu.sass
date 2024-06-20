@@ -1,28 +1,72 @@
 
 .menuContent
-	width: 50%
-	height: 30px
-	margin: 0 auto	
+  width: 55%
+  margin: 0 auto
+  display: flex
+  align-items: center
 
-	ul 
-		display: flex
-		list-style: none
-		padding: 0
-		margin: 0
-		font-size: 20px
-		justify-content: space-between
-		padding: 5px
+  ul 
+    display: flex
+    margin: 0
+    font-size: 20px
+    padding: 5px
 
-	li 
-		margin: 0 10px		
-		align-items: center
-		justify-content: center
+  li 
+    margin: 0 10px		
+    list-style: none
 
-	a
-		text-decoration: none
-		color: #FFF
-		transition: border-bottom 0.3s ease
-		cursor: pointer
-			
-		&:hover
-			border-bottom:5px solid #52ffc5
+  a
+    text-decoration: none
+    color: #FFF
+    transition: border-bottom 0.2s ease
+    cursor: pointer
+      
+    &:hover
+      border-bottom:5px solid #52ffc5
+
+.menuResponsive
+  display: none
+  position: absolute
+  top:0.75rem
+  right:0.5rem
+  flex-direction: column
+  justify-content: space-between
+  width: 2.25rem
+  height: 2rem
+  margin: 20px 10px 0 0
+
+  span
+    height: 0.4rem
+    width: 100%
+    background-color: #fff
+    border-radius: 0.2rem
+
+@media (max-width: 740px)
+  .menuResponsive
+    display: flex
+  
+  .menuContent
+    width: 100%
+    height: auto
+    flex-direction: column
+    align-items: start
+    padding: 10px
+
+    ul
+      display: none
+      flex-direction: column
+      width: 100%
+      margin-bottom: 0.25rem
+      transition: max-height 0.2s ease
+      padding: 5px 0
+
+      li
+        width: 100%
+        text-align: center
+        margin: 10px 0
+
+    .open
+      display: flex
+      max-height: 250px
+
+
