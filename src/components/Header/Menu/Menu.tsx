@@ -8,6 +8,7 @@ interface MenuProps{
 
 
 const Menu:React.FC<MenuProps> = ({onScrollTo}) =>{
+    
     const [menuOpen, setMenuOpen] =useState(false)
 
     

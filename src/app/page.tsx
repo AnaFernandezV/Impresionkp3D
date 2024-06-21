@@ -24,14 +24,13 @@ export default function Home() {
       <Router>
       <Routes>
         <Route path="/" element={
-          <Parallax ref={parallax} pages={4.5}>
-            <ParallaxLayer offset={0}>
-              <div className='header' id='logo'>
+          <Parallax ref={parallax} pages={4}>
+          
+            <ParallaxLayer offset={0} speed={2}>
+            <div className='header' id='logo'>
                 <Logo />
                 <Menu onScrollTo={handleScrollTo} />
               </div>
-            </ParallaxLayer>
-            <ParallaxLayer offset={0.2} speed={2}>
               <Content />
             </ParallaxLayer>
             <ParallaxLayer offset={1} speed={1.2} onClick={() => parallax.current.scrollTo(2)}>
@@ -40,7 +39,7 @@ export default function Home() {
             <ParallaxLayer offset={2} speed={1}>
               <Gallery />
             </ParallaxLayer>
-            <ParallaxLayer offset={3.5}>
+            <ParallaxLayer offset={3}>
               <Footer />
             </ParallaxLayer>
           </Parallax>
